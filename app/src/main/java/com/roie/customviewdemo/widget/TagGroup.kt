@@ -11,7 +11,16 @@ class TagGroup @JvmOverloads constructor(
 ): ViewGroup(context, attrs, defStyleAttr) {
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        var widthUsed = 0
+        var heightUsed = 0
+        var width = 0
+        var height = 0
+
+        for (index in 0 until childCount){
+            val child = getChildAt(index)
+            measureChildWithMargins(child, widthMeasureSpec, widthUsed, heightMeasureSpec, heightUsed)
+        }
+
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
