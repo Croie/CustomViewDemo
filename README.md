@@ -1,2 +1,2 @@
 # CustomViewDemo
-examples are just for your own learning
+examples are just for own learning
