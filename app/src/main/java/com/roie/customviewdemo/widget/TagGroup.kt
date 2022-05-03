@@ -19,6 +19,9 @@ class TagGroup @JvmOverloads constructor(
         for (index in 0 until childCount){
             val child = getChildAt(index)
             measureChildWithMargins(child, widthMeasureSpec, widthUsed, heightMeasureSpec, heightUsed)
+
+
+
         }
 
     }
